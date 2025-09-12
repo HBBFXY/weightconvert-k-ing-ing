@@ -6,7 +6,7 @@ def pound_to_kg(pound):
      """磅转千克：1千克 = 2.2046磅"""
      return pound / 2.2046
 print("=== 重量转换程序 ===")
-print("请输入重量数值及单位（单位仅支持 kg 或 pd，示例：10kg、10pd）：")
+print("(10kg、10pd）：")
 user_input = input().strip().lower()
 
 unit = user_input[-2:] 
