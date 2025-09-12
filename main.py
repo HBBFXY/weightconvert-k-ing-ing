@@ -1,24 +1,11 @@
-def kg_to_pound(kg):
-     """千克转磅：1千克 = 2.2046磅"""
-     return kg * 2.2046
-    
-def pound_to_kg(pound):
-     """磅转千克：1千克 = 2.2046磅"""
-     return pound / 2.2046
-print("=== 重量转换程序 ===")
-print("(10kg、10pd）：")
-user_input = input().strip().lower()
-
-unit = user_input[-2:] 
-try:
-     value = float(user_input[:-2])
-     if unit == "kg":
-         result = kg_to_pound(value)
-         print(f"{value:.0f}kg = {result:.3f}pd")
-     elif unit == "pd":
-         result = pound_to_kg(value)
-         print(f"{value:.0f}pd = {result:.3f}kg")
-     else:
-         print("单位错误！仅支持 kg（公斤）或 pd（磅）")
-except:
-     print("输入格式错误！请按示例格式输入（如 10kg、10pd）")
+user_input = input()
+weight = float(user_input[:-2])
+unit = user_input[-2:]
+if unit == "kg":
+     result = weight * 2.2046
+     print(f"对应的英制重量为{result:.3f}磅")
+elif unit == "pd":
+     result = weight / 2.2046
+     print(f"对应的公制重量为{result:.3f}公斤")
+else:
+     print("输入格式错误，请使用'xxkg'或'xxpd'格式（如10kg、10pd）")
